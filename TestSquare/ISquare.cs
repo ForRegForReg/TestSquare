@@ -1,6 +1,4 @@
-﻿
-
-namespace TestSquare
+﻿namespace TestSquare
 {
     interface ISquare
     {

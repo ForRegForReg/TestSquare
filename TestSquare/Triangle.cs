@@ -1,6 +1,5 @@
 ﻿using System;
 
-
 namespace TestSquare
 {
     public class Triangle : ISquare
@@ -8,6 +7,7 @@ namespace TestSquare
         public double A {get; set;}
         public double B { get; set; }
         public double C { get; set; }
+
         public bool IsRectangular
         {
             get
