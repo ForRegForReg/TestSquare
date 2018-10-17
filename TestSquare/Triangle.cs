@@ -4,9 +4,50 @@ namespace TestSquare
 {
     public class Triangle : ISquare
     {
-        public double A {get; set;}
-        public double B { get; set; }
-        public double C { get; set; }
+
+        private double _A;
+        private double _B; 
+        private double _C;
+
+        public double A {
+            get
+            {
+                return _A;
+            }
+            set
+            {
+                if (value > 0)
+                    _A = value;
+                else
+                    throw new Exception("Некорректное значение стороны.");
+            }
+        }
+        public double B {
+            get
+            {
+                return _B;
+            }
+            set
+            {
+                if (value > 0)
+                    _B = value;
+                else
+                    throw new Exception("Некорректное значение стороны.");
+            }
+        }
+        public double C {
+            get
+            {
+                return _C;
+            }
+            set
+            {
+                if (value > 0)                
+                    _C = value;
+                else
+                    throw new Exception("Некорректное значение стороны.");
+            }
+        }
 
         public bool IsRectangular
         {

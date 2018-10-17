@@ -6,6 +6,45 @@ namespace TestSquare.Tests
     [TestClass]
     public class SquareTests
     {
+
+        [TestMethod]
+        public void NotCorrectTriangleTest()
+        {
+            Exception exception = null;
+            double a = 5;
+            double b = -4;
+            double c = 3;
+            try
+            {
+                Triangle tri = new Triangle(a, b, c);
+            }
+            catch (Exception ex)
+            {
+                exception = ex;
+            }
+            Assert.IsNotNull(exception);
+
+
+        }
+
+        [TestMethod]
+        public void NotCorrectCircelTest()
+        {
+            Exception exception = null;
+            double r = -2;
+            try
+            {
+                Circle cir = new Circle(r);
+            }
+            catch (Exception ex)
+            {
+
+                exception = ex;
+            }
+            Assert.IsNotNull(exception);
+        }
+
+
         [TestMethod]
         public void TriangleSquareTest()
         {
@@ -23,7 +62,7 @@ namespace TestSquare.Tests
 
         [TestMethod]
         public void IsRectangularTest()
-        {
+      {
             double a = 5;
             double b = 4;
             double c = 3;
@@ -43,7 +82,6 @@ namespace TestSquare.Tests
 
             Circle cir = new Circle(r);
             double ActualValue = cir.CalculateSquare();
-
             Assert.AreEqual(ExpectedValue, ActualValue);
 
         }
