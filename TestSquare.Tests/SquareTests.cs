@@ -12,6 +12,7 @@ namespace TestSquare.Tests
         {
             Exception exception = null;
             double a = 5;
+
             double b = -4;
             double c = 3;
             try
