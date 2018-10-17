@@ -1,4 +1,4 @@
-select  Products.ProductName,
+select  Products.ProductName as 'Product Name',
 STRING_AGG (ISNULL(Categories.CategoryName,'No Category'),',') as 'Category'
  from Products left outer join ProductsCategories 
 on Products.ProductID = ProductsCategories.ProductID left outer join Categories
